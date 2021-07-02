@@ -67,18 +67,18 @@
 			<th>IMAGEN</th>
 			<th>DESCRIPCION</th>
 		</thead>
-		@foreach($products as $art)
+		@foreach($products as $product)
 		<tr>
-			<td>{{ $art->id }}</td>
-			<td>{{ $art->nombre }}</td>
-			<td>{{ $art->stock }}</td>
-			<td>${{ $art->precio }}</td>
+			<td>{{ $product->id }}</td>
+			<td>{{ $product->nombre }}</td>
+			<td>{{ $product->stock }}</td>
+			<td>${{ $product->precio }}</td>
 			<td><div class="imagen-tabla">
-					<img src="{{asset('imagenes/products/'.$art->imagen)}}" alt="{{$art->imagen}}" class="img-thumbnail">  
+					<img src="{{asset('imagenes/products/'.$product->imagen)}}" alt="{{$product->imagen}}" class="img-thumbnail">  
 				</div>
 			</td>
 			<td class="texto-largo-cont">
-				<div class="texto-largo">{{ $art->descripcion}}</div>
+				<div class="texto-largo">{{ $product->descripcion}}</div>
 			</td> 
 			
 		</tr>

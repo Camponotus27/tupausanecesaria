@@ -81,22 +81,22 @@
 
 				<div class="containerr">
 
-					@foreach($products as $art)
+					@foreach($products as $product)
 					<div class="item">
 						<div class="caja-item">
-							<div class="nombre">{{ $art->nombre}}</div>
+							<div class="nombre">{{ $product->nombre}}</div>
 							<div class="sub-item">		
-								<img src="{{asset('imagenes/products/'.$art->imagen)}}" alt="{{$art->imagen}}" height="100px" width="100px" class=" imagen">
+								<img src="{{asset('imagenes/products/'.$product->imagen)}}" alt="{{$product->imagen}}" height="100px" width="100px" class=" imagen">
 							</div>
-							<div class="precio">${{$art->precio}}</div>
+							<div class="precio">${{$product->precio}}</div>
 
-							<a href="" class="modal-bottom" data-target ="#modal-ordenar-{{$art->id}}" data-toggle = "modal">
-								<button id="{{$art->id}}" class="boton-carrito">Ordenar</button>
+							<a href="" class="modal-bottom" data-target ="#modal-ordenar-{{$product->id}}" data-toggle = "modal">
+								<button id="{{$product->id}}" class="boton-carrito">Ordenar</button>
 							</a>
 
 						</div>
 					</div>
-					@include('menu.modal-ordenar' , ['complements' => $art->complements] )
+					@include('menu.modal-ordenar' , ['complements' => $product->complements] )
 					@endforeach
 				</div>
 			

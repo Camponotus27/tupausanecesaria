@@ -43,10 +43,11 @@ class PermissionsTableSeeder extends Seeder
         Permission::create(['name' => 'warehouse.category.store']);
         Permission::create(['name' => 'warehouse.category.destroy']);
 
-        //Articulos
+        //Productos
         Permission::create(['name' => 'warehouse.product.index']);
         Permission::create(['name' => 'warehouse.product.show']);
         Permission::create(['name' => 'warehouse.product.edit']);
+        Permission::create(['name' => 'warehouse.product.update']);
         Permission::create(['name' => 'warehouse.product.create']);
         Permission::create(['name' => 'warehouse.product.store']);
         Permission::create(['name' => 'warehouse.product.destroy']);
@@ -83,6 +84,7 @@ class PermissionsTableSeeder extends Seeder
             'warehouse.product.index',
             'warehouse.product.show',
             'warehouse.product.edit',
+            'warehouse.product.update',
             'warehouse.product.create',
             'warehouse.product.store',
             'warehouse.product.destroy',

@@ -1,11 +1,11 @@
 
-<div class="modal fade modal-slide-in-rigth modal-order" aria-hidden = "true" data-backdrop="static" role = "dialog" tabindex = "-1" id="modal-ordenar-{{$art->id}}">
+<div class="modal fade modal-slide-in-rigth modal-order" aria-hidden = "true" data-backdrop="static" role = "dialog" tabindex = "-1" id="modal-ordenar-{{$product->id}}">
 
-	{!! Form::open(['url' => '/in_shopping_carts' , 'class' => 'add-to-cart' , 'data-idArticulo' => $art->id , 'method' => 'POST']) !!}
+	{!! Form::open(['url' => '/in_shopping_carts' , 'class' => 'add-to-cart' , 'data-idArticulo' => $product->id , 'method' => 'POST']) !!}
 		<div class="modal-dialog">
 			<div class="modal-content">	
 				<div class="modal-header">
-					<button type="button" class="close close-modal-{{$art->id}}" data-dismiss = "modal" aria-label = "Cerrar">
+					<button type="button" class="close close-modal-{{$product->id}}" data-dismiss = "modal" aria-label = "Cerrar">
 						<span aria-hidden = "true">x</span>
 					</button>
 					<h4 class="menu-modal-titulo">Eliga su pedido</h4> 
@@ -13,26 +13,26 @@
 				<div class="modal-body">	
 					<div class="menu-modal-cont">
 
-						<div class="menu-modal-item lista flex-grow" style="display: {{(empty($art->cant_complements))?'none':'block'}}">
-							<h2>Variaciones (<span class="cantidad_complements cantComplements-modal-{{$art->id}}">{{$art->cant_complements}}</span>)</h2>
+						<div class="menu-modal-item lista flex-grow" style="display: {{(empty($product->cant_complements))?'none':'block'}}">
+							<h2>Variaciones (<span class="cantidad_complements cantComplements-modal-{{$product->id}}">{{$product->cant_complements}}</span>)</h2>
 						
 							@foreach($complements as $complement)
 								<li>
 							        <label> 
-										<input type="checkbox" name="complements[]" value="{{$complement->nombre}}" class="chekbox-permisos checkbox-modal-{{$art->id}}" id="chekbox-permisos-{{$art->id}}-{{$complement->id}}">
+										<input type="checkbox" name="complements[]" value="{{$complement->nombre}}" class="chekbox-permisos checkbox-modal-{{$product->id}}" id="chekbox-permisos-{{$product->id}}-{{$complement->id}}">
 
-									    <label for="chekbox-permisos-{{$art->id}}-{{$complement->id}}" class="checkbox-personalizado"></label>
+									    <label for="chekbox-permisos-{{$product->id}}-{{$complement->id}}" class="checkbox-personalizado"></label>
 								        
 										<div class="checkbox-personalizado-descripcion">
-									        <label for="chekbox-permisos-{{$art->id}}-{{$complement->id}}" >{{ $complement->nombre }}</label>
+									        <label for="chekbox-permisos-{{$product->id}}-{{$complement->id}}" >{{ $complement->nombre }}</label>
 								        </div>
 							        </label>
 							    </li>
 							@endforeach
-							<p class="advertencia-model-complements-{{$art->id}}">Selecciona al menos una</p>
+							<p class="advertencia-model-complements-{{$product->id}}">Selecciona al menos una</p>
 						</div>
 						
-						@if($art->crema == true)
+						@if($product->crema == true)
 							<div class="menu-modal-item lista">
 								<h2>Crema</h2>
 								<div class="form-group lista" id="radio-check-personalizar-lista">
@@ -55,7 +55,7 @@
 							</div>
 						@endif
 
-						@if($art->azucar == true)
+						@if($product->azucar == true)
 							<div class="menu-modal-item">
 								<h2>Azucar</h2>
 								<div class="form-group lista" id="radio-check-personalizar-lista">
@@ -98,7 +98,7 @@
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss = "modal">Cerrar</button>
 						
-					<input type="hidden" name="products_id" value="{{$art->id}}" >
+					<input type="hidden" name="products_id" value="{{$product->id}}" >
 
 					<button type="submit" class="btn btn-primary" >Confirmar</button>
  

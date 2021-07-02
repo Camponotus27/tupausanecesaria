@@ -39,7 +39,7 @@ class CategorySeeder extends Seeder
             'nombre' => 'EstadoCero',
             'estado' => 0,
             'descripcion' =>
-                'Rica mermelada de frutas sabor tamarindo pero digamos que es de pera',
+                'Es un test pra verificar si se ve un producto con estado 0',
         ]);
     }
 }

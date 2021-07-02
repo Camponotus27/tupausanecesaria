@@ -27,7 +27,7 @@
 
 
 
-	{!! Form::model($product , ['method' => 'PATCH', 'route' => ['product.update' , $product->id], 'files' => 'true']) !!}
+	{!! Form::model($product , ['method' => 'PATCH', 'route' => ['products.update' , $product->id], 'files' => 'true']) !!}
 	{{Form::token()}}
 
 		@include('warehouse.product.partials.form')
