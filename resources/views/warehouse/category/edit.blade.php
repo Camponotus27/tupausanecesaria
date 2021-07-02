@@ -29,7 +29,7 @@
 			</div>
 			@endif
 
-			{!! Form::model($category , ['method' => 'PATCH', 'route' => ['category.update' , $category->id_category]]) !!}
+			{!! Form::model($category , ['method' => 'PATCH', 'route' => ['category.update' , $category->id]]) !!}
 			{{Form::token()}}
 
 			<div class="form-group">

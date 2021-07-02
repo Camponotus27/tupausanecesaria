@@ -82,7 +82,7 @@ class CategoryController extends Controller
     public function edit(Category $category)
     {
         return view('warehouse.category.edit', [
-            "category" => Category::findOrFail($id),
+            "category" => $category,
         ]);
     }
 
