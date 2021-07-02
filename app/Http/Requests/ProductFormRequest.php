@@ -27,7 +27,7 @@ class ProductFormRequest extends FormRequest
             'nombre' => 'required|max:50',
             'descripcion' => 'max:500',
             'image-data' => 'required', //mimes:jpg,jpeg|
-            'imagen' => 'required',
+            'imagen' => $this->method() == 'PATCH' ? '' : 'required',
             //'estado' =>,
             'stock' => 'required|numeric',
         ];

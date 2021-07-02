@@ -124,19 +124,18 @@
 
 		</div>
 
-
-
+		<!-- jcrop -->
 		<div class="image-editor col-lg-6 col-sm-12 col-md-6 col-xs-12" >
 			<div class="image-editor2">
 				@if(empty($product->imagen))
-			    	<input id="imagen_imput"  onchange="habilitar_edicion_imagen2()" type="file" class="imput-personalizado cropit-image-input" value="{{ old('image-data') }}" name="imagen">
+			    	<input id="imagen_input"  onchange="habilitar_edicion_imagen2()" type="file" class="imput-personalizado cropit-image-input" value="{{ old('image-data') }}" name="imagen">
 			    @else
-			    	<input id="imagen_imput" type="file" class="imput-personalizado cropit-image-input" name="imagen" value="{{asset('imagenes/products/'.$product->imagen)}}">
+			    	<input id="imagen_input" type="file" class="imput-personalizado cropit-image-input" name="imagen" value="{{getImageOrDefault('products/'.$product->imagen)}}">
 			    @endif
 
 			    
 
-			    <label for="imagen_imput"  class="">
+			    <label for="imagen_input"  class="">
 			    	<img src="{{asset('img/subir-imagen.png')}}">
 			    </label>
 

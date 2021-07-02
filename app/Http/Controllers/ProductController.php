@@ -140,7 +140,6 @@ class ProductController extends Controller
      */
     public function update(ProductFormRequest $request, Product $product)
     {
-        $product = Product::findOrFail($id);
         $product->id_category = $request->get('id_category');
         $product->cant_complements = $request->get('cant_complements');
         $product->nombre = $request->get('nombre');
@@ -161,17 +160,19 @@ class ProductController extends Controller
         } else {
             $product->azucar = 0;
         }
+        $typeMessage = 'info';
+        $message = 'Product actualizado con éxito';
 
-        $product->storageImagenFromCropit($request);
+        if (!$product->storageImagenFromCropit($request)) {
+            $typeMessage = 'danger';
+            $message = 'No se pudo guardar la imagen del producto';
+        }
 
         $product->update();
 
         $product->complements()->sync($request->get('complements'));
 
-        return redirect('warehouse/product')->with(
-            'info',
-            'Product actualizado con éxito'
-        );
+        return redirect('warehouse/product')->with($typeMessage, $message);
     }
 
     /**

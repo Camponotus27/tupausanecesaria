@@ -7,8 +7,8 @@ function habilitar_edicion_imagen() {
     $(".boton-imagen-panel").css("display", "none");
     $(".imagen-panel").css("display", "block");
 
-    var $imagen_input = $("#imagen_imput").attr("value");
-    var $posicion_imagen_input = $imagen_input.indexOf("products") + 10;
+    var $imagen_input = $("#imagen_input").attr("value");
+    var $posicion_imagen_input = $imagen_input.indexOf("products") + 9;
 
     var $nombre_imagen_input = $imagen_input.substring($posicion_imagen_input);
     var $posicion_imagen_input = $imagen_input.substring(
@@ -33,11 +33,13 @@ $(function () {
         maxZoom: 2,
         smallImage: "reject",
         imageState: {
-            src: $("#imagen_imput").attr("value"),
+            src: $("#imagen_input").attr("value"),
         },
-        onImageError: function () {
+        onImageError: function (err) {
+            console.log("Cropit: Error en la imagen -> ", err);
+
             alert(
-                "La imagen es inferior a 400x400 px. Ingresa una imagen mas grande."
+                "La imagen es inferior a 400x400px. Ingresa una imagen mas grande."
             );
         },
         onFileChange: function () {

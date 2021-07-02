@@ -25,13 +25,14 @@
 						<div class="caja-item">
 							<div class="nombre">{{ $product->nombre}}</div>
 							<div class="sub-item">		
-								<img src="{{asset('images/products/'.$product->imagen)}}" alt="{{$product->imagen}}" height="100px" width="100px" class=" imagen">
+								<img src="{{getImageOrDefault('products/'.$product->imagen)}}" alt="{{$product->imagen}}" height="100px" width="100px" class=" imagen">
 							</div>
 							<div class="precio">${{$product->precio}}</div>
 
+							<!--
 							<a href="" class="modal-bottom" data-target ="#modal-ordenar-{{$product->id}}" data-toggle = "modal">
 								<button id="{{$product->id}}" class="boton-carrito">Ordenar</button>
-							</a>
+							</a> -->
 
 						</div>
 					</div>
