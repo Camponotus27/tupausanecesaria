@@ -1,0 +1,4 @@
+---
+deployment:
+  tasks:
+    - /bin/php artisan migrate
