@@ -13,19 +13,24 @@ class CreateArticuloTable extends Migration
      */
     public function up()
     {
-        Schema::create('articulo', function (Blueprint $table) {
+        Schema::create('product', function (Blueprint $table) {
             $table->integer('id')->primary();
-            $table->integer('id_categoria');
+            $table->integer('id_category');
             $table->string('nombre', 250);
             $table->integer('stock')->default(0);
             $table->integer('precio');
-            $table->integer('cant_insumos')->default(1);
+            $table->integer('cant_complements')->default(1);
             $table->integer('crema')->default(0);
             $table->integer('azucar')->default(0);
             $table->string('descripcion', 1000)->nullable();
             $table->string('imagen', 100)->nullable();
             $table->string('estado', 25);
-            $table->foreign('id_categoria', 'articulo_ibfk_1')->references('id')->on('categoria')->onDelete('restrict')->onUpdate('cascade');
+            $table
+                ->foreign('id_category', 'product_ibfk_1')
+                ->references('id')
+                ->on('category')
+                ->onDelete('restrict')
+                ->onUpdate('cascade');
         });
     }
 
@@ -36,6 +41,6 @@ class CreateArticuloTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('articulo');
+        Schema::dropIfExists('product');
     }
 }

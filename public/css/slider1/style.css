@@ -1,0 +1,52 @@
+/**
+ * Slider
+ */
+.carousel-inner {
+
+	.item {
+		max-height: 680px;
+		&:after {
+			content: "";
+			background-color: rgba(0, 0, 0, .5);
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+	}
+
+}
+
+.carousel-control {
+	width: 10%;
+}
+
+.carousel-control .fa {
+	position: absolute;
+	top: 50%;
+	z-index: 5;
+	display: inline-block;
+
+	&.fa-chevron-right {
+		right: 50%;
+		margin-right: -10px;
+	}
+
+}
+
+@media screen and (min-width: 768px) {
+	.carousel-control .fa {
+		width: 30px;
+		height: 30px;
+		margin-top: -15px;
+		font-size: 30px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.carousel-control .fa-chevron-left {
+		margin-left: -15px;
+	}
+}
+

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateInsumosTable extends Migration
+class CreateComplementsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateInsumosTable extends Migration
      */
     public function up()
     {
-        Schema::create('insumos', function (Blueprint $table) {
+        Schema::create('complements', function (Blueprint $table) {
             $table->integer('id')->primary();
             $table->string('nombre');
             $table->integer('stock');
@@ -29,6 +29,6 @@ class CreateInsumosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('insumos');
+        Schema::dropIfExists('complements');
     }
 }
