@@ -1,0 +1,129 @@
+.contenedor-shopping-cart{
+	background: rgba(0,0,0,0.7);
+	position: fixed;
+	right:83px;
+	top: 10px;
+	border-radius: 10px;
+	z-index: 30;
+	padding: 0 var(--txs);
+	border-radius: var(--ts);
+	opacity: .9;
+}
+
+
+.efecto-ordenar{
+	position: absolute;
+	display: none;
+	left: 10px;
+	top: 10vh;
+	width: 36px;
+	height: 40px;
+	background: #179196;
+	animation: ordenar 2s;
+}
+
+.efecto-ordenar:after{
+	content: "";
+	position: absolute;
+	left: 8px;
+	top: 33px;
+	width: 20px;
+	height: 5px;
+	background: #E59A0C;
+}
+
+.efecto-ordenar:before{
+	content: "";
+	position: absolute;
+	left: 0px;
+	top: 10px;
+	width: 36px;
+	height: 20px;
+	background: #aaa;
+}
+
+.ordenar-contenedor{
+	animation: ordenar-contenedor 1s 1s;
+}
+
+@keyframes ordenar{
+	0%   {opacity: 0;}
+    25%  {}
+    50%  {opacity: 1;}
+    75%  {top: 10px; opacity: 0;}
+    100% {opacity: 0;}
+}
+
+@keyframes ordenar-contenedor{
+	0%   {filter: invert(0);}
+    50%  {}
+    75%  {filter: invert(1);}
+    100% {}
+}
+
+.contenedor-shopping-cart img{
+	width: 45px;
+	height: auto;
+	filter: invert(1);
+}
+
+.contenedor-shopping-cart span{
+	color: white;
+	position: absolute;
+	top: 11px;
+	left: 11px;
+}
+
+@media screen and (min-width: 360px) {
+		
+}
+
+@media screen and (min-width: 768px) {
+	.contenedor-shopping-cart{
+		right: 10px;
+		top: calc(var(--txxxl) + 10px);
+		opacity: 1;
+		transition: all 0.3s;
+		box-sizing: border-box;
+		padding: var(--txs);
+	}
+
+	.contenedor-shopping-cart:hover{
+		filter: invert(1);
+		border: 2px solid white;
+		padding: calc(var(--txs) - 2px);
+	}
+
+	.contenedor-shopping-cart span{
+		transition: all 0.3s;
+		top: 18px;
+		left: 13px;
+	}
+
+	.contenedor-shopping-cart:hover span{
+		top: 16px;
+		left: 11px;
+	}
+
+	.efecto-ordenar{
+		display: none;
+		position: absolute;
+		left: -30vw;
+		top: 10px;
+	}
+
+	@keyframes ordenar{
+		0%   {opacity: 0;}
+	    25%  {}
+	    50%  {opacity: 1;}
+	    75%  {left: 10px; opacity: 0;}
+	    100% {opacity: 0;}
+	}
+
+	
+}
+
+@media screen and (min-width: 1200px) {
+	
+}
+

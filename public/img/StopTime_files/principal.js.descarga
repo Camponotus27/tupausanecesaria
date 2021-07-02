@@ -1,0 +1,7 @@
+var $numero = $('#max-descripcion-numero');
+var $textarea = $('#max-descripcion-textarea');
+
+
+$textarea.on('keyup', function(){
+	$numero.text(500 - $(this).val().length);
+})

@@ -1,0 +1,118 @@
+      .cropit-preview {
+        background-color: #f8f8f8;
+        background-size: cover;
+        border: 5px solid #ccc;
+        border-radius: 3px;
+        margin-top: 7px;
+      }
+      
+      @media screen and (max-width: 471px) {
+        
+      }
+
+      .cropit-responsive{
+        max-width: 100%;
+        height: 430px;
+        overflow-x: auto;
+        overflow-y: hidden;
+      }
+
+      .sub-cropit-responsive{
+        width: 410px;
+        height: 420px;
+        overflow: hidden;
+      }
+      .cropit-preview-image-container {
+        cursor: move;
+      }
+
+      .cropit-preview-background {
+        opacity: .2;
+        cursor: auto;
+      }
+
+      .image-size-label {
+        margin-top: 10px;
+      }
+
+      input, .export {
+        /* Use relative position to prevent from being covered by image background */
+        position: relative;
+        z-index: 10;
+        display: block;
+      }
+
+      .image-editor{
+        padding: 10px
+      }
+      
+      .imput-personalizado{
+        display: none !important;
+      }
+      .imput-personalizado + label{
+        height: 7em;
+        width: 7em;
+        border-radius: 3.5em;
+      }
+
+      @media screen and (max-width: 471px) {
+        .imput-personalizado + label{
+            margin: 0 calc(50% - 7em/2);
+        }
+      }
+
+      .imput-personalizado + label > img{
+        height: 100%;
+        width: auto;
+        cursor: pointer;
+      }
+
+      .imagen-panel{
+        width: 100%;
+        padding: 10px;
+      }
+
+      .image-editor2{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;  
+        align-items: center;
+      }
+
+      /* botones de giro*/
+      .rotate-section{
+        display: flex;
+      }
+
+      .rotate-section div,.rotate-section input{
+        margin: 5px;
+      }
+
+      #range-rotate{
+        flex-grow: 3
+      }
+      .rotate-imagen{
+        width: 4em;
+      }
+
+      .rotate-imagen img{
+        width: 100%;
+        height: auto;
+        transform: rotate(-20deg);
+        /* transition: all 2s; */
+      }
+      .rotate-ccw{/* izqueirda*/
+
+      }
+
+      .rotate-cw{
+        transform: scaleX(-1); 
+      }
+
+      /*
+      .rotate-imagen img:hover{
+        transform: rotate(-120deg);
+      }*/
+      /* end botones de giro */

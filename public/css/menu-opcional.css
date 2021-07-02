@@ -1,0 +1,84 @@
+/*	menu  */ 
+
+	/* Estilos generales*/
+	.menu a{
+		color: black;
+	}
+
+	nav ul{
+		list-style: none;
+		padding: 0px;
+	}
+
+	nav li{
+		line-height: 3rem;
+		position: relative;
+	}
+
+	nav li ul{
+		position: absolute;
+	}
+
+	nav a{
+		color: #ddd;
+		display: block;
+		padding: 0px 2.5em;
+		text-decoration: none;
+		transition: .4s;
+	}
+	nav a:hover{
+		background: rgba(0,0,0,.5);
+
+	}
+
+	nav li li {
+		background: #222;
+	}
+
+	nav li ul{
+		display: none;
+	}
+
+	nav li:hover > ul{
+		display: block;
+	}
+
+	/* Estilos primer nivel*/
+
+	nav > ul > li {
+		float: left;
+	}
+
+	nav > ul {
+		background: #333;
+		display: table;
+		width: 100%;
+	}
+
+	/* Estilo segundo nivel*/
+
+	nav li li{
+		background: #222;
+		max-height: 0;
+		overflow: hidden;
+		transition: all .6;
+		width: 200px;
+	}
+
+	nav li:hover > ul > li{
+		max-height: 1000px; /* si no baja mas aca esta el problema*/
+		overflow: visible;
+	}
+
+	nav > ul > li > ul{
+		top: 100%;
+	}
+
+	/* Estilos tercer nivel*/
+
+	nav ul ul ul{
+		left: 100%;
+		top: 0;
+	}
+
+/*   fin menu*/

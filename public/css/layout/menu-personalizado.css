@@ -1,0 +1,223 @@
+/* end panel-botones-de abajo del principal*/
+
+.container-buttons-botom{
+	position: fixed;
+	color: #eee;
+	font-size: var(--txxl);
+	z-index: 30;
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content:center;
+
+	padding: 0;
+	flex-direction: column;
+	top: 0;
+	bottom: auto;
+	background: transparent;
+	transition: all 1s ease-out;
+	transition-timing-function: cubic-bezier(0, 2, 2, 2);
+	/*http://cubic-bezier.com/#0,1,0,1*/
+}
+
+.container-buttons-botom:before{
+	content: "";
+	background: linear-gradient(rgba(0,0,0,7), transparent);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 75px;
+	z-index: -999;
+}
+
+.item-buttons-botom{
+	width: 100%;
+	justify-content:center;
+}
+
+
+
+.item-buttons-botom-left{
+	background: rgba(0,0,0,0.7);
+	align-items: stretch;
+	position: absolute;
+	top:calc(-42px *3);	
+	transition: all 1s;
+	flex-direction: column;
+}
+
+.item-buttons-botom-center{
+	z-index: 0;
+	height: 70px;
+	order:-10;
+}
+
+.item-buttons-botom-right{
+	background: rgba(0,0,0,0.7);
+	align-items: stretch;
+	position: absolute;
+	top:calc(-42px *3);	
+	transition: all 1s;
+	flex-direction: column;
+}
+
+.subitem-buttons-botom{
+	flex-basis: var(--txxl);	
+	display: flex;
+	justify-content:center;
+}
+
+.color-blanco{
+	color: 	#ddd;
+}
+
+.color-blanco:hover{
+	color: 	#ddd;
+	background: rgba(222,222,222,.1);
+	color: #F0AD0C;
+}
+
+.menu-link{
+	display: block;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+
+.menu-link, .menu-link:visited , .menu-link:active ,.menu-link:link , .menu-link:hover{
+		text-decoration: none;
+}
+
+.item-buttons-botom-center > .subitem-buttons-botom{
+	display: flex;
+	justify-content: space-between;
+}
+
+.logo{
+	padding: var(--txxs);
+}
+
+.conteiner-sub-barrita-menu{
+	padding: 14px 10px ;
+	background: rgba(0,0,0,0.6);
+	margin: 10px;
+	border-radius: 10px;
+}
+
+.barrita-menu{
+	height: 4px;
+	width: 36px;
+	display: block;
+	background: #bbb;
+	border-radius: 2px;
+
+}
+
+.barrita-menu-inferior{
+	margin-top: 10px;
+}
+
+@media screen and (min-width: 360px) {
+	.container-buttons-botom{
+		flex-direction: row;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.container-buttons-botom{
+		font-size: var(--tl);
+		background: rgba(0,0,0,0.6);
+		position: absolute;
+		flex-direction: row;
+		bottom: 0;
+		top: auto;
+		width: 100%;
+		margin-bottom: 10vh;
+		align-items: center;
+		justify-content:center;
+	}
+
+	.container-buttons-botom:before{
+		display: none;
+	}
+
+	.conteiner-barrita-menu{
+		display: none;
+	}
+
+	.item-buttons-botom-right{
+		position: relative;
+		top: auto;
+		background: none;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.item-buttons-botom-left{
+		position: relative;
+		top: auto;
+		background: none;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.item-buttons-botom-center{
+		order:0;
+		flex-basis: 200px;
+	}
+
+	.logo{
+		padding: 0;
+	}
+
+	.logo img{
+		
+	}	
+
+	.item-buttons-botom-center > .subitem-buttons-botom{
+		display: flex;
+		justify-content: center ;
+	}
+
+	.subitem-buttons-botom{
+		flex-basis: var(--txxl);
+		line-height: var(--txxl);	
+		justify-content:center;
+	}
+
+	.item-buttons-botom{
+		width: 100%;
+		height: 100%;
+		justify-content:center;
+	}
+
+	.subitem-buttons-botom{
+		flex-basis: 270px;
+
+		display: flex;
+		justify-content:center;
+	}
+
+	/* Correr el menu hacia arriba section*/
+	.seccion-menu > .container-buttons-botom{
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: auto;
+		background: rgba(0,0,0,0.9);
+	}
+
+}
+
+@media screen and (min-width: 1200px) {
+
+}
+
+.menu-movile-active{
+	transition: all 1.8s;
+	background: rgba(0,0,0,0.7);
+	z-index: 40;
+}
