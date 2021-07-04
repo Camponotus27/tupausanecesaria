@@ -43,6 +43,12 @@ Route::get('menu', [App\Http\Controllers\MenuController::class, 'index'])->name(
     'menu.index'
 );
 
+// Vincular Storage
+Route::get('/create-symlink', function () {
+    symlink(storage_path('/app/public'), public_path('storage'));
+    echo "Symlink Created. Thanks";
+});
+
 //Permisos y roles
 
 Route::middleware(['auth'])->group(function () {
