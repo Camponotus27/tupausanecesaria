@@ -37,7 +37,11 @@
 				    		<li>
 						        <label> 
 
-									<input type="checkbox" name="complements[]" value="{{$complement->id}}" class="chekbox-permisos checkbox_complements" id="chekbox-permisos-{{$complement->id}}" {{($complement->marcado == true)? 'checked' :'' }}>
+									@if(old())
+										<input type="checkbox" name="complements[]" value="{{$complement->id}}" class="chekbox-permisos checkbox_complements" id="chekbox-permisos-{{$complement->id}}" {{((old('complements') && in_array($complement->id, old('complements'))))? 'checked' :'' }}>
+									@else
+										<input type="checkbox" name="complements[]" value="{{$complement->id}}" class="chekbox-permisos checkbox_complements" id="chekbox-permisos-{{$complement->id}}" {{($complement->marcado == true)? 'checked' :'' }}>
+									@endif
 
 								     <label for="chekbox-permisos-{{$complement->id}}" class="checkbox-personalizado"></label>
 							        
@@ -79,11 +83,12 @@
 						<li>
 						        <label class="azucar_crema"> 
 					
-									@if(!empty($product->crema))
-										<input type="checkbox" name="crema" class="chekbox-permisos" value="1" id="crema" {{($product->crema == 1)? 'checked' :'' }}>
+									@if(old())
+										<input type="checkbox" name="crema" class="chekbox-permisos" value="1" id="crema" {{(old('crema') == '1')? 'checked' :'' }}>
 									@else
-										<input type="checkbox" name="crema" class="chekbox-permisos" value="1" id="crema" >
+										<input type="checkbox" name="crema" class="chekbox-permisos" value="1" id="crema" {{(!empty($product->crema) && $product->crema == 1)? 'checked' :'' }}>
 									@endif
+
 								     <label for="crema" class="checkbox-personalizado"></label>
 							        
 									<div class="checkbox-personalizado-descripcion">
@@ -97,10 +102,10 @@
 					<div class="">
 						<li>
 						        <label class="azucar_crema"> 
-						        	@if(!empty($product->azucar))
-										<input type="checkbox" name="azucar" class="chekbox-permisos" value="1" id="azucar" {{($product->azucar == 1)? 'checked' :'' }}>
+						        	@if(old())
+										<input type="checkbox" name="azucar" class="chekbox-permisos" value="1" id="azucar" {{(old('azucar') == '1')? 'checked' :'' }}>
 									@else
-										<input type="checkbox" name="azucar" class="chekbox-permisos" value="1" id="azucar">
+										<input type="checkbox" name="azucar" class="chekbox-permisos" value="1" id="azucar" {{(!empty($product->azucar) && $product->azucar == 1)? 'checked' :'' }}>
 									@endif
 
 								     <label for="azucar" class="checkbox-personalizado"></label>

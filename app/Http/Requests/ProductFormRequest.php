@@ -56,7 +56,7 @@ class ProductFormRequest extends FormRequest
     {
         return [
             'image-data.required' => 'El campo de la imagen es obligatorio.',
-            'imagen.required' => 'La imagen originar se ha extraviado.',
+            'imagen.required' => 'La imagen original se ha extraviado.',
         ];
     }
 }
