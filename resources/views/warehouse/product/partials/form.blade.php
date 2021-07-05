@@ -18,7 +18,7 @@
 
 					<label for = "category">Category</label>
 					<select name="id_category" class="form-control">
-						@foreach($categorys as $cat)
+						@foreach($categories as $cat)
 							<option value="{{$cat->id}}" style="text-transform: capitalize;" {{($cat->id == old('id_category')? 'selected':'')}} >{{$cat->nombre}}</option>
 						@endforeach
 					</select>

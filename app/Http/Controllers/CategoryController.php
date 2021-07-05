@@ -17,9 +17,9 @@ class CategoryController extends Controller
     public function index(Request $request)
     {
         $query = trim($request->get('searchText'));
-        $categorys = Category::stateOn()->get();
+        $categories = Category::stateOn()->get();
         return view('warehouse.category.index', [
-            "categorys" => $categorys,
+            "categories" => $categories,
             "searchText" => $query,
         ]);
     }

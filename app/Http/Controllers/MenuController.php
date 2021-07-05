@@ -11,8 +11,9 @@ class MenuController extends Controller
     public function index(Request $request)
     {
         $products = Product::where('estado', '=', '1')->paginate(10);
+        $categories = Category::all();
 
-        return view('menu.index', ["products" => $products]);
+        return view('menu.index', compact(['products', 'categories']));
 
         // TODO: para que es esto?
         $query = trim($request->get('searchText'));
@@ -20,7 +21,7 @@ class MenuController extends Controller
         $category = Category::forMenu()->get();
 
         return view('menu.index', [
-            "categorys" => $category,
+            "categories" => $category,
             "searchText" => $query,
         ]);
     }

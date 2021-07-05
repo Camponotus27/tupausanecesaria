@@ -21,7 +21,7 @@ class Category extends Model
     //relaciones
     public function products()
     {
-        return $this->hasMany('app/Product', 'id_category');
+        return $this->hasMany('App\Models\Product', 'id_category');
     }
 
     //general

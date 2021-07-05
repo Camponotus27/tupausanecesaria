@@ -18,27 +18,29 @@
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<center>
-				<div class="containerr">
 
-					@foreach($products as $product)
-					<div class="item">
-						<div class="caja-item">
-							<div class="nombre">{{ $product->nombre}}</div>
-							<div class="sub-item">		
-								<img src="{{getImageOrDefault('products/'.$product->imagen)}}" alt="{{$product->imagen}}" height="100px" width="100px" class=" imagen">
+				@foreach($categories as $category)
+					<h1>{{$category->nombre}}</h1>
+					<div class="containerr">
+						@if($category->products->count() > 0)
+							@foreach($category->products as $product)
+							<div class="item">
+								<div class="caja-item">
+									<div class="nombre">{{ $product->nombre}}</div>
+									<div class="sub-item">		
+										<img src="{{getImageOrDefault('products/'.$product->imagen)}}" alt="{{$product->imagen}}" height="100px" width="100px" class=" imagen">
+									</div>
+									<div class="precio">${{$product->precio}}</div>	
+									<p class="precio">{{$product->descripcion}}</p>	
+								</div>
 							</div>
-							<div class="precio">${{$product->precio}}</div>
-
-							<!--
-							<a href="" class="modal-bottom" data-target ="#modal-ordenar-{{$product->id}}" data-toggle = "modal">
-								<button id="{{$product->id}}" class="boton-carrito">Ordenar</button>
-							</a> -->
-
-						</div>
+							@include('menu.modal-ordenar' , ['complements' => $product->complements] )
+							@endforeach
+						@else
+							<h3>Proximamente</h3>
+						@endif
 					</div>
-					@include('menu.modal-ordenar' , ['complements' => $product->complements] )
-					@endforeach
-				</div>
+				@endforeach
 			</center>
 		</div>
 	</div>

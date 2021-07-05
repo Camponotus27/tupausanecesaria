@@ -39,11 +39,11 @@ class ProductController extends Controller
     public function create()
     {
         $complements = Complement::orderNombre()->get();
-        $categorys = Category::stateOn()->get();
+        $categories = Category::stateOn()->get();
 
         return view(
             "warehouse.product.create",
-            compact('complements', 'categorys')
+            compact('complements', 'categories')
         );
     }
 
@@ -123,11 +123,11 @@ class ProductController extends Controller
     public function edit(Product $product)
     {
         $complements = Product::chekedComplements($product);
-        $categorys = Category::stateOn()->get();
+        $categories = Category::stateOn()->get();
 
         return view(
             'warehouse.product.edit',
-            compact('product', 'complements', 'categorys')
+            compact('product', 'complements', 'categories')
         );
     }
 
