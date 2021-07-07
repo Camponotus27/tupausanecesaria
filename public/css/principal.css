@@ -442,15 +442,15 @@ body {
 /* link */
 
 .link {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .link:a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .link:visited {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 /* end link*/
@@ -1190,3 +1190,11 @@ input[type="range"].slider-range:focus::-ms-fill-upper {
 }
 
 /* end sub-titulo*/
+
+/* titulo */
+
+.titulo {
+    font-size: var(--txxl);
+}
+
+/* end titulo */

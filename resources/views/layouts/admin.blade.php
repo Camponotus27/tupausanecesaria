@@ -210,7 +210,10 @@
       <!-- menu personalizado -->
         @if(Request::url() === Request::root())
           <div class="">
-                  @include('layouts.unete')
+                  @can('navigate.unete')
+                    @include('layouts.unete')
+                  @endcan
+
                   @include('layouts.menu-personalizado')  
 
           </div> 

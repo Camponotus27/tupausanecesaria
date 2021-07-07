@@ -20,24 +20,22 @@
 			<center>
 
 				@foreach($categories as $category)
-					<h1>{{$category->nombre}}</h1>
-					<div class="containerr">
-						@if($category->products->count() > 0)
-							@foreach($category->products as $product)
-							<div class="item">
-								<div class="caja-item">
-									<div class="nombre">{{ $product->nombre}}</div>
-									<div class="sub-item">		
-										<img src="{{getImageOrDefault('products/'.$product->imagen)}}" alt="{{$product->imagen}}" height="100px" width="100px" class=" imagen">
+					@if($category->products->count() > 0)
+						<h1>{{$category->nombre}}</h1>
+						<div class="containerr">
+								@foreach($category->products as $product)
+								<div class="item">
+									<div class="caja-item">
+										<div class="nombre">{{ $product->nombre}}</div>
+										<div class="sub-item">		
+											<img src="{{getImageOrDefault('products/'.$product->imagen)}}" alt="{{$product->imagen}}" height="100px" width="100px" class=" imagen">
+										</div>
+										<div class="precio">${{$product->precio}}</div>	
+										<p class="precio">{{$product->descripcion}}</p>	
 									</div>
-									<div class="precio">${{$product->precio}}</div>	
-									<p class="precio">{{$product->descripcion}}</p>	
 								</div>
-							</div>
-							@include('menu.modal-ordenar' , ['complements' => $product->complements] )
-							@endforeach
-						@else
-							<h3>Proximamente</h3>
+								@include('menu.modal-ordenar' , ['complements' => $product->complements] )
+								@endforeach
 						@endif
 					</div>
 				@endforeach

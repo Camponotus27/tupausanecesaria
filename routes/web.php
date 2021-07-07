@@ -43,6 +43,10 @@ Route::get('menu', [App\Http\Controllers\MenuController::class, 'index'])->name(
     'menu.index'
 );
 
+Route::get('contactanos', [App\Http\Controllers\NavigateController::class, 'contactUs'])->name(
+    'navigate.contact-us'
+);
+
 // Vincular Storage
 Route::get('/create-symlink', function () {
     symlink(storage_path('/app/public'), public_path('storage'));
