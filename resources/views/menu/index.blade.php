@@ -36,8 +36,8 @@
 								</div>
 								@include('menu.modal-ordenar' , ['complements' => $product->complements] )
 								@endforeach
-						@endif
-					</div>
+						</div>
+					@endif
 				@endforeach
 			</center>
 		</div>
