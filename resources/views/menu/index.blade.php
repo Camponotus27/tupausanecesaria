@@ -10,7 +10,7 @@
 
 	<div class="row">
 		<div class="col-lg-6 col-sm-8 col-md-6 col-xs-12 center-block">
-			<div class="panel-heading titulo_login">Menu</div>
+			<div class="panel-heading titulo_login">Elige tus favoritos</div>
 			{{-- @include('menu.search') --}}
 		</div>
 	</div>
@@ -21,7 +21,7 @@
 
 				@foreach($categories as $category)
 					@if($category->products->count() > 0)
-						<h1>{{$category->nombre}}</h1>
+						<h1 class="category">{{$category->nombre}}</h1>
 						<div class="containerr">
 								@foreach($category->products as $product)
 								<div class="item">
@@ -31,7 +31,7 @@
 											<img src="{{getImageOrDefault('products/'.$product->imagen)}}" alt="{{$product->imagen}}" height="100px" width="100px" class=" imagen">
 										</div>
 										<div class="precio">${{$product->precio}}</div>	
-										<p class="precio">{{$product->descripcion}}</p>	
+										<p class="description">{{$product->descripcion}}</p>	
 									</div>
 								</div>
 								@include('menu.modal-ordenar' , ['complements' => $product->complements] )

@@ -1,5 +1,10 @@
+@font-face {
+    font-family: Podkova;
+    src: url("/fonts/Podkova-VariableFont_wght.ttf");
+}
+
 :root {
-    font-family: "Roboto Slab", serif !important;
+    font-family: "Podkova";
 
     --ratio: 1.414;
 
@@ -21,6 +26,10 @@
     box-sizing: border-box;
 
     --colorDatePickerActive: #5265ff;
+}
+
+body {
+    font-family: "Podkova";
 }
 
 @media screen and (max-width: 768px) {
@@ -178,7 +187,6 @@
 /* end table*/
 
 body {
-    font-family: "Roboto Slab", serif !important;
     font-size: 15px;
 }
 
