@@ -236,17 +236,17 @@
           <!--Fin-Contenido-->
           <footer>
             <div class="footer-personalizado">
-              <div class="footer-personalizado-item txl">Todos los dias desde las 9:30 hasta las 21:00 hrs.</div>
+              <div class="footer-personalizado-item txl">De Lunes a Viernes desde las 10:00 hasta las 17:00 hrs.</div>
               <div class="footer-personalizado-item txl">
                 <h3>Siguenos!</h3>
                 <div class="redes-sociale">
                   <div class="redes-sociale-item">
-                      <a href="https://www.facebook.com/stoptime.cl/" target="_blank">
+                      <a href="https://www.facebook.com/stoptime.cl" target="_blank">
                           <img src="{{asset('img/Iconos/facebook.png')}}" alt="">
                       </a>
                   </div>
                   <div class="redes-sociale-item">
-                      <a href="https://www.facebook.com/stoptime.cl/" target="_blank">
+                      <a href="https://instagram.com/stoptime.cl" target="_blank">
                         <img src="{{asset('img/Iconos/instagram.png')}}" alt="">
                       </a>
                   </div>
