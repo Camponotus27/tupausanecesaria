@@ -3,6 +3,11 @@
     src: url("/fonts/Podkova-VariableFont_wght.ttf");
 }
 
+@font-face {
+    font-family: Santiago-Pro;
+    src: url("/fonts/Santiago-Pro.ttf");
+}
+
 :root {
     font-family: "Podkova";
 

@@ -57,6 +57,7 @@ class ComposerStaticInit99a6de26f005ead3b8510403ca7ea5d2
         ),
         'T' => 
         array (
+            'TitasGailius\\Terminal\\' => 22,
             'TijsVerkoyen\\CssToInlineStyles\\' => 31,
             'Tests\\' => 6,
         ),
@@ -202,6 +203,10 @@ class ComposerStaticInit99a6de26f005ead3b8510403ca7ea5d2
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
+        ),
+        'TitasGailius\\Terminal\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/titasgailius/terminal/src',
         ),
         'TijsVerkoyen\\CssToInlineStyles\\' => 
         array (
@@ -547,9 +552,12 @@ class ComposerStaticInit99a6de26f005ead3b8510403ca7ea5d2
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\InShoppingCartController' => __DIR__ . '/../..' . '/app/Http/Controllers/InShoppingCartController.php',
         'App\\Http\\Controllers\\MenuController' => __DIR__ . '/../..' . '/app/Http/Controllers/MenuController.php',
+        'App\\Http\\Controllers\\NavigateController' => __DIR__ . '/../..' . '/app/Http/Controllers/NavigateController.php',
         'App\\Http\\Controllers\\OrderController' => __DIR__ . '/../..' . '/app/Http/Controllers/OrderController.php',
         'App\\Http\\Controllers\\ProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProductController.php',
+        'App\\Http\\Controllers\\RoleController' => __DIR__ . '/../..' . '/app/Http/Controllers/RoleController.php',
         'App\\Http\\Controllers\\ShoppingCartController' => __DIR__ . '/../..' . '/app/Http/Controllers/ShoppingCartController.php',
+        'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\BuildShoppingCart' => __DIR__ . '/../..' . '/app/Http/Middleware/BuildShoppingCart.php',
@@ -5422,6 +5430,14 @@ class ComposerStaticInit99a6de26f005ead3b8510403ca7ea5d2
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Property\\Property' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Property/Property.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Processor' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Processor.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
+        'TitasGailius\\Terminal\\Builder' => __DIR__ . '/..' . '/titasgailius/terminal/src/Builder.php',
+        'TitasGailius\\Terminal\\Contracts\\Factory' => __DIR__ . '/..' . '/titasgailius/terminal/src/Contracts/Factory.php',
+        'TitasGailius\\Terminal\\Contracts\\Response' => __DIR__ . '/..' . '/titasgailius/terminal/src/Contracts/Response.php',
+        'TitasGailius\\Terminal\\Fakes\\BuilderFake' => __DIR__ . '/..' . '/titasgailius/terminal/src/Fakes/BuilderFake.php',
+        'TitasGailius\\Terminal\\Fakes\\ResponseFake' => __DIR__ . '/..' . '/titasgailius/terminal/src/Fakes/ResponseFake.php',
+        'TitasGailius\\Terminal\\OutputLine' => __DIR__ . '/..' . '/titasgailius/terminal/src/OutputLine.php',
+        'TitasGailius\\Terminal\\Response' => __DIR__ . '/..' . '/titasgailius/terminal/src/Response.php',
+        'TitasGailius\\Terminal\\Terminal' => __DIR__ . '/..' . '/titasgailius/terminal/src/Terminal.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
