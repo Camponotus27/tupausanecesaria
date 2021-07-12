@@ -34,7 +34,7 @@
 
     <!--bootstrap-glyphicons-->
 
-    <link rel="stylesheet" href="{{asset('css/principal.css')}}">
+    <link rel="stylesheet" href="{{asset('css/principal.css?123')}}">
 
     <!-- Jcrop -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
