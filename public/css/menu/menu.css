@@ -1,9 +1,9 @@
 /* menu item */
 
 .caja-item {
-    background: #914d34;
-    padding-bottom: 10px;
-    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .sub-item {
@@ -12,27 +12,22 @@
 }
 
 .nombre {
-    background: #e0d1b1;
-    color: #fafafa;
     display: block;
-    font-size: 1.3em;
-    max-width: 100%;
-    position: relative;
-    text-align: center;
-    text-align: 1.1em;
-    text-transform: capitalize;
+    text-transform: uppercase;
     z-index: 10;
-    width: 100%;
+    text-align: left;
+    flex-basis: 75%;
 }
 
 .category {
-    margin-top: var(--txl);
+    margin-top: var(--txxl);
+    font-family: "Trocchi-Regular";
+    color: #ab2f0f;
 }
 
 .precio {
-    color: white;
-    font-size: var(--txl);
-    margin: 0.2em;
+    flex-basis: 25%;
+    text-align: right;
 }
 
 .description {
@@ -77,24 +72,34 @@
     transform: scale(1.1);
 }
 
-@media screen and (min-width: 360px) {
-    .containerr {
-        flex-direction: row;
-    }
+.container-menu {
+    display: flex;
+    flex-direction: row;
+}
 
-    .item {
+.item-menu {
+    box-sizing: border-box;
+    color: #291009;
+    font-family: "Montserrat-Light";
+    font-size: var(--tl);
+    padding: 2px 20px;
+    width: 100%;
+}
+
+@media screen and (min-width: 360px) {
+    .item-menu {
         flex-basis: 50%;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .item {
+    .item-menu {
         flex-basis: 33.33%;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .item {
+    .item-menu {
         flex-basis: 25%;
     }
 }

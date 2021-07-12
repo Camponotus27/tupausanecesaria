@@ -2,8 +2,28 @@
 @section ('contenido')
 
 <style>
-	
 
+	/* sacar a un nuevo componente */
+	.spacing{
+		width: 100%;
+		height: 120px;
+	}
+
+	.spacing {
+    	position: relative;
+	}
+
+	.spacing:before {
+		content: "";
+		background: #ab2f0f;
+		bottom: 0;
+		height: 2px;
+		left: 30%;
+		width: 40%;
+		top: 60%;
+		position: absolute;
+		transition: all 0.6s;
+	}
 </style>
 
 	<link rel="stylesheet" href="{{asset('css/menu/menu.css')}}">
@@ -16,22 +36,20 @@
 	</div>
 
 	<div class="row">
+		<div>
+			
+		</div>
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<center>
-
 				@foreach($categories as $category)
 					@if($category->products->count() > 0)
 						<h1 class="category">{{$category->nombre}}</h1>
-						<div class="containerr">
+						<div class="">
 								@foreach($category->products as $product)
-								<div class="item">
+								<div class="item-menu">
 									<div class="caja-item">
 										<div class="nombre">{{ $product->nombre}}</div>
-										<div class="sub-item">		
-											<img src="{{getImageOrDefault('products/'.$product->imagen)}}" alt="{{$product->imagen}}" height="100px" width="100px" class=" imagen">
-										</div>
-										<div class="precio">${{$product->precio}}</div>	
-										<p class="description">{{$product->descripcion}}</p>	
+										<div class="precio">${{$product->precio}}</div>		
 									</div>
 								</div>
 								@include('menu.modal-ordenar' , ['complements' => $product->complements] )
@@ -41,5 +59,8 @@
 				@endforeach
 			</center>
 		</div>
+	</div>
+	<div class="spacing" >
+
 	</div>
 @endsection

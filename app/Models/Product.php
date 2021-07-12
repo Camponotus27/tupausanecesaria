@@ -25,7 +25,7 @@ class Product extends Model implements Auditable
         'azucar',
         'imagen',
         'stock',
-        'valor',
+        'precio',
         'id_category',
         'estado',
     ];

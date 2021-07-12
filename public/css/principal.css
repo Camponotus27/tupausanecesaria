@@ -8,6 +8,16 @@
     src: url("/fonts/Santiago-Pro.ttf");
 }
 
+@font-face {
+    font-family: Trocchi-Regular;
+    src: url("/fonts/Trocchi-Regular.ttf");
+}
+
+@font-face {
+    font-family: Montserrat-Light;
+    src: url("/fonts/Montserrat-Light.ttf");
+}
+
 :root {
     font-family: "Podkova";
 
@@ -282,9 +292,9 @@ body {
 }
 
 .seccion {
+    background: #e0d1b1;
     margin: 0px;
-    margin-top: 70px;
-    padding: 15px;
+    padding: 70px 15px 15px 15px;
     min-height: calc(100vh - 70px);
 }
 
@@ -655,6 +665,8 @@ body {
 }
 
 .titulo_login {
+    font-family: "Trocchi-Regular";
+    color: #3e1d2d;
     font-size: var(--txxl);
     text-align: center;
 }
@@ -792,7 +804,7 @@ body {
 .footer-personalizado {
     display: flex;
     flex-direction: column;
-    background: #dbcb6b;
+    background: #e0d1b1;
     color: #736312;
     justify-content: center;
     align-items: stretch;
@@ -833,7 +845,7 @@ body {
 }
 
 .footer-personalizado-dos {
-    background: #736312;
+    background: #61512f;
     text-align: center;
     justify-content: center;
     padding: var(--tl);

@@ -26,7 +26,8 @@ class ProductFactory extends Factory
         return [
             'nombre' => $this->faker->text(100),
             'precio' => $this->faker->randomNumber(5),
-            'estado' => 'fake_created',
+            'id_category' => $this->faker->numberBetween(1, 3),
+            'estado' => '1',
         ];
     }
 }
