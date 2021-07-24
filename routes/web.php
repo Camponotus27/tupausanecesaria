@@ -292,4 +292,11 @@ Route::middleware(['auth'])->group(function () {
     ])
         ->name('misCompras.index')
         ->middleware('permission:misCompras.index');
+
+    //Visit
+
+    Route::get('/estadisticas', [
+        App\Http\Controllers\StadisticsController::class,
+        'visits',
+    ]);
 });
