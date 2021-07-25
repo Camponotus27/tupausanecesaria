@@ -15,12 +15,7 @@ const initialOptions = {
     },
 };
 
-const initialSeries = [
-    {
-        name: "series-1",
-        data: [],
-    },
-];
+const initialSeries = [];
 
 function Visit() {
     const [isLoading, setIsLoading] = useState(true);
@@ -30,24 +25,37 @@ function Visit() {
 
     useEffect(() => {
         axios
-            .get("api/visits", { pathSearch: "" })
+            .get("api/visits", { params: { pathSearch: "/menu" } })
             .then((res) => res.data)
-            .catch(() => setIsError(true))
+            .then((data) =>
+                data.map((serie) => {
+                    return {
+                        x: serie.date,
+                        y: serie.count,
+                    };
+                })
+            )
+            .then((data) => {
+                setSeries([
+                    {
+                        name: "Visitas",
+                        data: data,
+                    },
+                ]);
+            })
+            .catch((e) => {
+                console.log(e);
+                setIsError(true);
+            })
             .finally(() => setIsLoading(false));
-    });
+    }, []);
 
     if (isError) return <div>No se pudo cargar la data</div>;
-    //if (isLoading) return <div>Cargando..</div>;
+    if (isLoading) return <div>Cargando..</div>;
 
     return (
         <div className="mixed-chart">
-            <Chart
-                options={options}
-                series={series}
-                type="bar"
-                width="500"
-                noData
-            />
+            <Chart options={options} series={series} type="bar" width="500" />
         </div>
     );
 }
