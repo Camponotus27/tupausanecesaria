@@ -288,5 +288,6 @@
         <!-- datapicker -->
         <script src="{{asset('js/datapicker/bootstrap-datetimepicker.js')}}"></script>
 
+        <script src="{{ mix('js/app.js') }}"></script>
       </body>
 </html>
