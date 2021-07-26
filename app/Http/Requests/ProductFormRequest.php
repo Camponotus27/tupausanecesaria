@@ -26,10 +26,11 @@ class ProductFormRequest extends FormRequest
         return [
             'nombre' => 'required|max:50',
             'descripcion' => 'max:500',
-            'image-data' => 'required', //mimes:jpg,jpeg|
-            'imagen' => $this->method() == 'PATCH' ? '' : 'required',
+            'precio' => 'required',
+            //'image-data' => 'required', //mimes:jpg,jpeg|
+            //'imagen' => $this->method() == 'PATCH' ? '' : 'required',
             //'estado' =>,
-            'stock' => 'required|numeric',
+            //'stock' => 'required|numeric',
         ];
 
         if (!empty($this->articulo->id)) {

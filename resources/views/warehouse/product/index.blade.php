@@ -26,11 +26,12 @@
 						<th>ID</th>
 						<th>NOMBRE</th>
 						<th>CATEGORIA</th>
+						{{--
 						<th>STOCK</th>
 						<th>CANT INSUMOS</th>
 						<th>CREMA</th>
 						<th>AZUCAR</th>
-						<th>PRECIO</th>
+						<th>PRECIO</th>--}}
 						<th>IMAGEN</th>
 						<th>DESCRIPCION</th>
 						<th>OPCIONES</th>
@@ -40,15 +41,17 @@
 						<td>{{ $product->id}}</td>
 						<td class="capitalize">{{ $product->nombre}}</td>
 						<td>{{ $product->category->nombre}}</td>
+						<td>${{ $product->precio}}</td>
+						{{--
 						<td>{{ $product->stock}}</td>
 						<td>{{ $product->cant_complements}}</td>
 						<td>{{ ($product->crema == 0)?'NO':'SI'}}</td>
 						<td>{{ ($product->azucar== 0)?'NO':'SI'}}</td>
-						<td>${{ $product->precio}}</td>
 						<td><div class="imagen-tabla">
 								<img src="{{getImageOrDefault('products/Ico-'.$product->imagen)}}" alt="{{$product->imagen}}" class="img-thumbnail">  
 							</div>
 						</td>
+						--}}
 						<td class="texto-largo-cont"><div class="texto-largo">{{ $product->descripcion}}</div>
 						</td> 
 						<td><div>

@@ -262,8 +262,9 @@
             </div>
           </footer>
 
+        <script src="{{ mix('js/app.js') }}"></script>
 
-        <!-- jquery 2.1.4 al cambiarlo puere el jcrop -->
+        <!-- jquery 2.1.4 al cambiarlo muere el jcrop -->
         <script src="{{asset('js/jQuery-2.1.4.min.js')}}"></script>
         <!-- Bootstrap 3.3.5 -->
         <script src="{{asset('js/bootstrap.js')}}"></script>
@@ -288,6 +289,6 @@
         <!-- datapicker -->
         <script src="{{asset('js/datapicker/bootstrap-datetimepicker.js')}}"></script>
 
-        <script src="{{ mix('js/app.js') }}"></script>
+ 
       </body>
 </html>

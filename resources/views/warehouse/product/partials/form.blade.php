@@ -15,11 +15,14 @@
 				</div>
 
 				<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
-
 					<label for = "category">Category</label>
 					<select name="id_category" class="form-control">
 						@foreach($categories as $cat)
-							<option value="{{$cat->id}}" style="text-transform: capitalize;" {{($cat->id == old('id_category')? 'selected':'')}} >{{$cat->nombre}}</option>
+							@if ($cat->id == $product->id_category || $cat->id == old('id_category'))
+							<option value="{{$cat->id}}" style="text-transform: capitalize;" selected>{{$cat->nombre}}</option>	
+							@else
+							<option value="{{$cat->id}}" style="text-transform: capitalize;" >{{$cat->nombre}}</option>
+							@endif
 						@endforeach
 					</select>
 				</div>
@@ -28,7 +31,7 @@
 						
 
 
-
+			{{--
 			<h4>Lista de complements</h4>
 			<div class="form-group lista ">
 				<div class="row max-h-overflow-y">
@@ -55,20 +58,25 @@
 				</div>
 			</div>
 
+			--}}
 
 			<div class="row">
+				{{-- 
 				<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
 					<div class="form-group">
 						{{ Form::label('cant_complements', 'Cant. complements') }}
 						{{ Form::number('cant_complements', null , [ 'placeholder' => '1' , 'class' => 'form-control' , 'min' => '1', 'max' => '1', 'id' => 'cant_complements']) }}
 					</div>
 				</div>
+
+				
 				<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
 					<div class="form-group">
 						{{ Form::label('stock', 'Stock') }}
 						{{ Form::number('stock', null , [ 'placeholder' => '0' , 'class' => 'form-control']) }}
 					</div>
 				</div>
+				--}}
 				<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
 					<div class="form-group">
 						{{ Form::label('precio', 'Valor') }}
@@ -77,6 +85,7 @@
 				</div>
 			</div>
 
+			{{--
 			<div class="row lista">
 				<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
 					<div class="form-group">
@@ -117,7 +126,7 @@
 						    </li>
 					</div>
 				</div>
-			</div>
+			</div> --}}
 
 			<div class="form-group">
 				{{ Form::label('descripcion', 'Descripción') }}
@@ -129,6 +138,7 @@
 
 		</div>
 
+		{{--
 		<!-- jcrop -->
 		<div class="image-editor col-lg-6 col-sm-12 col-md-6 col-xs-12" >
 			<div class="image-editor2">
@@ -175,6 +185,7 @@
 		</div>
 
 		<!-- end jcrop -->
+		--}}
 </div>
 
 
