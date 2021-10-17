@@ -2,46 +2,65 @@
 @section ('contenido')
 
 <style>
-	
 
+	/* sacar a un nuevo componente */
+	.spacing{
+		width: 100%;
+		height: 120px;
+	}
+
+	.spacing {
+    	position: relative;
+	}
+
+	.spacing:before {
+		content: "";
+		background: #ab2f0f;
+		bottom: 0;
+		height: 2px;
+		left: 30%;
+		width: 40%;
+		top: 60%;
+		position: absolute;
+		transition: all 0.6s;
+	}
 </style>
 
-	<link rel="stylesheet" href="{{asset('css/menu/menu.css')}}">
+	<link rel="stylesheet" href="{{asset('css/menu/menu.css?123')}}">
 
 	<div class="row">
 		<div class="col-lg-6 col-sm-8 col-md-6 col-xs-12 center-block">
-			<div class="panel-heading titulo_login">Menu</div>
+			<div class="panel-heading titulo_login">Elige tus favoritos</div>
 			{{-- @include('menu.search') --}}
 		</div>
 	</div>
 
 	<div class="row">
+		<div>
+			
+		</div>
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<center>
-
 				@foreach($categories as $category)
-					<h1>{{$category->nombre}}</h1>
-					<div class="containerr">
-						@if($category->products->count() > 0)
-							@foreach($category->products as $product)
-							<div class="item">
-								<div class="caja-item">
-									<div class="nombre">{{ $product->nombre}}</div>
-									<div class="sub-item">		
-										<img src="{{getImageOrDefault('products/'.$product->imagen)}}" alt="{{$product->imagen}}" height="100px" width="100px" class=" imagen">
+					@if($category->products->count() > 0)
+						<h1 class="category">{{$category->nombre}}</h1>
+						<div class="">
+								@foreach($category->products as $product)
+								<div class="item-menu">
+									<div class="caja-item">
+										<div class="nombre">{{ $product->nombre}}</div>
+										<div class="precio">${{$product->precio}}</div>		
 									</div>
-									<div class="precio">${{$product->precio}}</div>	
-									<p class="precio">{{$product->descripcion}}</p>	
 								</div>
-							</div>
-							@include('menu.modal-ordenar' , ['complements' => $product->complements] )
-							@endforeach
-						@else
-							<h3>Proximamente</h3>
-						@endif
-					</div>
+								@include('menu.modal-ordenar' , ['complements' => $product->complements] )
+								@endforeach
+						</div>
+					@endif
 				@endforeach
 			</center>
 		</div>
+	</div>
+	<div class="spacing" >
+
 	</div>
 @endsection

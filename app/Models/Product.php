@@ -5,24 +5,27 @@ namespace App\Models;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use OwenIt\Auditing\Contracts\Auditable;
+use OwenIt\Auditing\Auditable as AuditableTrait;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Image;
 
-class Product extends Model
+class Product extends Model implements Auditable
 {
     use HasFactory;
+    use AuditableTrait;
 
     protected $fillable = [
         //campos que agremamos al modelo
         'nombre',
         'descripcion',
-        'cant_complements',
-        'crema',
-        'azucar',
-        'imagen',
-        'stock',
-        'valor',
+        //'cant_complements',
+        //'crema',
+        //'azucar',
+        //'imagen',
+        //'stock',
+        'precio',
         'id_category',
         'estado',
     ];

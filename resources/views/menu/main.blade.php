@@ -1,26 +1,20 @@
 @extends ('layouts.admin')
 @section ('contenido')
-
-
 <div class="background_image">
 	<img src="{{asset('img/Cafetres.jpg')}}" alt="">
 </div>
 
 
 <!-- Video -->
-<div class="container_video_background">
 
+<div class="container_video_background">
+	@include('menu.menu-button')
 	<video muted autoplay loop="loop" poster="{{asset('img/coffe.jpg')}}" preload="auto" class="video_background" >
   		<source src="{{asset('img/coffe.mp4')}}" media="(max-width:768px)"/>
   		<source src="{{asset('img/coffe.webm')}}" media="(max-width:768px)"type="video/webm" />
   		<source src="{{asset('img/coffe_1.ogv')}}" media="(max-width:768px)" type="video/ogg"/>
-
-
   		<source class="video_background_img" src="{{asset('img/coffe_imagen.jpg')}}" alt="">
 	</video>
-	
-	</div>
-
 </div>
 
 
@@ -29,7 +23,7 @@
 	<h1 class="titulo_linea_inferior txl">¡¡Bienvenido!!</h1>
 	<p class="margin-bottom-xl">
 		"Descubre a pocos pasos del banco estado de buin, este pequeño espacio donde podras disfrutar con quien desees una pausa rodeada de tranquilidad, buena musica, los mejores productos artesanales, escapando de la rutina"
-	</p>
+	</p>											
 
 </div>
 

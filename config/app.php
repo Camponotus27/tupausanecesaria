@@ -176,6 +176,10 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+        OwenIt\Auditing\AuditingServiceProvider::class,
+
+        Shetabit\Visitor\Provider\VisitorServiceProvider::class,
     ],
 
     /*
@@ -232,5 +236,7 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
 
         'Image' => Intervention\Image\Facades\Image::class,
+
+        'Visitor' => Shetabit\Visitor\Facade\Visitor::class,
     ],
 ];

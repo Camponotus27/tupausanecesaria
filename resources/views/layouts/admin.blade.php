@@ -34,10 +34,10 @@
 
     <!--bootstrap-glyphicons-->
 
-    <link rel="stylesheet" href="{{asset('css/principal.css')}}">
+    <link rel="stylesheet" href="{{asset('css/principal.css?123')}}">
 
     <!-- Jcrop -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="{{asset('css/cropit/cropit.css')}}">
     <!-- end Jcrop -->
 
@@ -210,7 +210,10 @@
       <!-- menu personalizado -->
         @if(Request::url() === Request::root())
           <div class="">
-                  @include('layouts.unete')
+                  @can('navigate.unete')
+                    @include('layouts.unete')
+                  @endcan
+                  
                   @include('layouts.menu-personalizado')  
 
           </div> 
@@ -233,17 +236,17 @@
           <!--Fin-Contenido-->
           <footer>
             <div class="footer-personalizado">
-              <div class="footer-personalizado-item txl">Todos los dias desde las 9:30 hasta las 21:00 hrs.</div>
+              <div class="footer-personalizado-item txl">De Lunes a Viernes desde las 10:00 hasta las 17:00 hrs.</div>
               <div class="footer-personalizado-item txl">
                 <h3>Siguenos!</h3>
                 <div class="redes-sociale">
                   <div class="redes-sociale-item">
-                      <a href="https://www.facebook.com/stoptime.cl/" target="_blank">
+                      <a href="https://www.facebook.com/stoptime.cl" target="_blank">
                           <img src="{{asset('img/Iconos/facebook.png')}}" alt="">
                       </a>
                   </div>
                   <div class="redes-sociale-item">
-                      <a href="https://www.facebook.com/stoptime.cl/" target="_blank">
+                      <a href="https://instagram.com/stoptime.cl" target="_blank">
                         <img src="{{asset('img/Iconos/instagram.png')}}" alt="">
                       </a>
                   </div>
@@ -259,8 +262,9 @@
             </div>
           </footer>
 
+        <script src="{{ mix('js/app.js') }}"></script>
 
-        <!-- jquery 2.1.4 al cambiarlo puere el jcrop -->
+        <!-- jquery 2.1.4 al cambiarlo muere el jcrop -->
         <script src="{{asset('js/jQuery-2.1.4.min.js')}}"></script>
         <!-- Bootstrap 3.3.5 -->
         <script src="{{asset('js/bootstrap.js')}}"></script>
@@ -285,5 +289,6 @@
         <!-- datapicker -->
         <script src="{{asset('js/datapicker/bootstrap-datetimepicker.js')}}"></script>
 
+ 
       </body>
 </html>

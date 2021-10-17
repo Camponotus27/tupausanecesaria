@@ -6,7 +6,9 @@
           <div class="subitem-buttons-botom"> 
                 <a class="menu-link color-blanco" href="{{ route('menu.index') }}">Menu</a>             
           </div>
-          <div class="subitem-buttons-botom">Nosotros</div>
+          @can('navigate.nosotros.index')
+            <div class="subitem-buttons-botom">Nosotros</div>
+          @endcan
         </div>
 
         <div class="item-buttons-botom item-buttons-botom-center">
@@ -23,8 +25,12 @@
         </div>
 
         <div class="item-buttons-botom item-buttons-botom-right">
-          <div class="subitem-buttons-botom">Reservas</div>
-          <div class="subitem-buttons-botom">Contactanos</div>
+          @can('navigate.reservas.index')
+            <div class="subitem-buttons-botom">Reservas</div>
+          @endcan
+          <div class="subitem-buttons-botom">
+            <a class="menu-link color-blanco" href="{{ route('navigate.contact-us') }}">Contactanos</a>          
+          </div>
         </div>
 
 </div>

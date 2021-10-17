@@ -43,6 +43,11 @@ Route::get('menu', [App\Http\Controllers\MenuController::class, 'index'])->name(
     'menu.index'
 );
 
+Route::get('contactanos', [
+    App\Http\Controllers\NavigateController::class,
+    'contactUs',
+])->name('navigate.contact-us');
+
 // Vincular Storage
 Route::get('/create-symlink', function () {
     symlink(storage_path('/app/public'), public_path('storage'));
@@ -287,4 +292,11 @@ Route::middleware(['auth'])->group(function () {
     ])
         ->name('misCompras.index')
         ->middleware('permission:misCompras.index');
+
+    //Visit
+
+    Route::get('/estadisticas', [
+        App\Http\Controllers\StadisticsController::class,
+        'visits',
+    ]);
 });

@@ -18,7 +18,10 @@ class ProductController extends Controller
     public function index(Request $request)
     {
         $query = trim($request->get('searchText'));
-        $products = Product::where('estado', '=', '1')->paginate(7);
+
+        $products = Product::where('estado', '=', '1')
+            ->where('nombre', 'like', '%' . $query . '%')
+            ->paginate(15);
 
         $complements = Complement::orderNombre()->get();
 
@@ -40,10 +43,11 @@ class ProductController extends Controller
     {
         $complements = Complement::orderNombre()->get();
         $categories = Category::stateOn()->get();
+        $product = new Product();
 
         return view(
             "warehouse.product.create",
-            compact('complements', 'categories')
+            compact('product', 'complements', 'categories')
         );
     }
 
@@ -56,15 +60,16 @@ class ProductController extends Controller
     public function store(ProductFormRequest $request)
     {
         $product = new Product();
+        /*
         if (!empty($request->get('cant_complements'))) {
             $product->cant_complements = $request->get('cant_complements');
-        }
+        }*/
         $product->id_category = $request->get('id_category');
         $product->nombre = $request->get('nombre');
-        $product->crema = $request->get('crema');
-        $product->azucar = $request->get('azucar');
-        $product->descripcion = $request->get('descripcion');
-        $product->stock = $request->get('stock');
+        //$product->crema = $request->get('crema');
+        //$product->azucar = $request->get('azucar');
+        //$product->descripcion = $request->get('descripcion');
+        //$product->stock = $request->get('stock');
         $product->precio = $request->get('precio');
         $product->estado = '1';
 
@@ -84,16 +89,19 @@ class ProductController extends Controller
             $product->azucar = 0;
         }
 
+        $product->cant_complements = 0;
+
+        /*
         if (!$product->storageImagenFromCropit($request)) {
             return redirect('warehouse/product')->with(
                 'danger',
                 'No se pudo guardar la imagen del producto'
             );
-        }
+        }*/
 
         $product->save();
 
-        $product->complements()->sync($request->get('complements'));
+        //$product->complements()->sync($request->get('complements'));
 
         return redirect('warehouse/product')->with(
             'info',
@@ -141,12 +149,12 @@ class ProductController extends Controller
     public function update(ProductFormRequest $request, Product $product)
     {
         $product->id_category = $request->get('id_category');
-        $product->cant_complements = $request->get('cant_complements');
+        //$product->cant_complements = $request->get('cant_complements');
         $product->nombre = $request->get('nombre');
-        $product->crema = $request->get('crema');
-        $product->azucar = $request->get('azucar');
+        //$product->crema = $request->get('crema');
+        //$product->azucar = $request->get('azucar');
         $product->descripcion = $request->get('descripcion');
-        $product->stock = $request->get('stock');
+        // $product->stock = $request->get('stock');
         $product->precio = $request->get('precio');
 
         if (!empty($request->get('crema'))) {
@@ -160,17 +168,21 @@ class ProductController extends Controller
         } else {
             $product->azucar = 0;
         }
+        $product->cant_complements = 0;
+
         $typeMessage = 'info';
         $message = 'Product actualizado con éxito';
 
+        /*
         if (!$product->storageImagenFromCropit($request)) {
             $typeMessage = 'danger';
             $message = 'No se pudo guardar la imagen del producto';
         }
+        */
 
         $product->update();
 
-        $product->complements()->sync($request->get('complements'));
+        //$product->complements()->sync($request->get('complements'));
 
         return redirect('warehouse/product')->with($typeMessage, $message);
     }
@@ -183,7 +195,6 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        $product = Product::findOrFail($id);
         $product->estado = "0";
         $product->update();
         return redirect('warehouse/product');

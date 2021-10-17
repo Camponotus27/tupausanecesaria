@@ -1,5 +1,5 @@
 :root {
-    font-family: "Roboto Slab", serif !important;
+    font-family: "Podkova";
 
     --ratio: 1.414;
 
@@ -21,6 +21,10 @@
     box-sizing: border-box;
 
     --colorDatePickerActive: #5265ff;
+}
+
+body {
+    font-family: "Podkova";
 }
 
 @media screen and (max-width: 768px) {
@@ -178,7 +182,6 @@
 /* end table*/
 
 body {
-    font-family: "Roboto Slab", serif !important;
     font-size: 15px;
 }
 
@@ -269,9 +272,9 @@ body {
 }
 
 .seccion {
+    background: #e0d1b1;
     margin: 0px;
-    margin-top: 70px;
-    padding: 15px;
+    padding: 70px 15px 15px 15px;
     min-height: calc(100vh - 70px);
 }
 
@@ -442,15 +445,15 @@ body {
 /* link */
 
 .link {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .link:a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .link:visited {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 /* end link*/
@@ -642,6 +645,8 @@ body {
 }
 
 .titulo_login {
+    font-family: "Trocchi-Regular";
+    color: #3e1d2d;
     font-size: var(--txxl);
     text-align: center;
 }
@@ -779,7 +784,7 @@ body {
 .footer-personalizado {
     display: flex;
     flex-direction: column;
-    background: #dbcb6b;
+    background: #e0d1b1;
     color: #736312;
     justify-content: center;
     align-items: stretch;
@@ -820,7 +825,7 @@ body {
 }
 
 .footer-personalizado-dos {
-    background: #736312;
+    background: #61512f;
     text-align: center;
     justify-content: center;
     padding: var(--tl);
@@ -1190,3 +1195,11 @@ input[type="range"].slider-range:focus::-ms-fill-upper {
 }
 
 /* end sub-titulo*/
+
+/* titulo */
+
+.titulo {
+    font-size: var(--txxl);
+}
+
+/* end titulo */
