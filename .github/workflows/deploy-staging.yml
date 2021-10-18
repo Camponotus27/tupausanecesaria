@@ -22,6 +22,15 @@ jobs:
           source: "."
           target: "/var/www/staging.tupausanecesaria.cl"
 
+      - name: Add permission
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          USERNAME: ${{ secrets.USERNAME }}
+          PORT: ${{ secrets.PORT }}
+          KEY: ${{ secrets.SSHKEY }}
+          script: sudo chown -R www-data:www-data /var/www/
+
       - name: Executing migration
         uses: appleboy/ssh-action@master
         with:
