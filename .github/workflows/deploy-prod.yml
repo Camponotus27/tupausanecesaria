@@ -22,8 +22,8 @@ jobs:
         with:
           source: "."
           target: "/var/www/tupausanecesaria.cl"
-          
-       - name: Add permission
+
+      - name: Add permission
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
