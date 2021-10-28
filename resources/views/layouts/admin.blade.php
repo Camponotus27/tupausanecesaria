@@ -258,7 +258,7 @@
               </div>
             </div>
             <div class="footer-personalizado-dos tl">
-                StopTime distribuidora anonima
+                <a style="text-decoration: none; color: #dbcb6b;" href="{{ url('/login') }}">StopTime</a> distribuidora anonima
             </div>
           </footer>
 
