@@ -236,7 +236,6 @@
           <!--Fin-Contenido-->
           <footer>
             <div class="footer-personalizado">
-              <div class="footer-personalizado-item txl">De Lunes a Viernes desde las 10:00 hasta las 17:00 hrs.</div>
               <div class="footer-personalizado-item txl">
                 <h3>Siguenos!</h3>
                 <div class="redes-sociale">
