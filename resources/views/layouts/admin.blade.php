@@ -235,7 +235,10 @@
    
           <!--Fin-Contenido-->
           <footer>
+       
             <div class="footer-personalizado">
+              <div class="mt-txl"></div>
+              @include('layouts.avisos')
               <div class="footer-personalizado-item txl">
                 <h3>Siguenos!</h3>
                 <div class="redes-sociale">

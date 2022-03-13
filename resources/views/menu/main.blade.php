@@ -9,6 +9,9 @@
 
 <div class="container_video_background">
 	@include('menu.menu-button')
+	<div id="avisos-main">
+		@include('layouts.avisos')
+	</div>
 	<video muted autoplay loop="loop" poster="{{asset('img/coffe.jpg')}}" preload="auto" class="video_background" >
   		<source src="{{asset('img/coffe.mp4')}}" media="(max-width:768px)"/>
   		<source src="{{asset('img/coffe.webm')}}" media="(max-width:768px)"type="video/webm" />
