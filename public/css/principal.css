@@ -1221,4 +1221,10 @@ input[type="range"].slider-range:focus::-ms-fill-upper {
     background: linear-gradient(transparent, rgba(255,255,255,7));
 }
 
+@media (min-width: 767px) {
+    #avisos-main{
+       display: none;
+    }
+}
+
 /* end avisos */
