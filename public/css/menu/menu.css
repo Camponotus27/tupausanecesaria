@@ -13,10 +13,11 @@
 
 .nombre {
     display: block;
+    flex-basis: 75%;
+    font-family: "Karla-Bold";
+    text-align: left;
     text-transform: uppercase;
     z-index: 10;
-    text-align: left;
-    flex-basis: 75%;
 }
 
 .category {
