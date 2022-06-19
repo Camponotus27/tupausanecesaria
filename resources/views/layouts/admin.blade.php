@@ -34,7 +34,7 @@
 
     <!--bootstrap-glyphicons-->
 
-    <link rel="stylesheet" href="{{asset('css/principal.css?123')}}">
+    <link rel="stylesheet" href="{{asset('css/principal.css?100')}}">
 
     <!-- Jcrop -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
@@ -43,7 +43,7 @@
 
     <!-- Font  -->
 
-    <link rel="stylesheet" href="{{asset('fonts/font.css')}}" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="{{asset('fonts/font.css?100')}}" type="text/css" charset="utf-8" />
     
   
    <!-- Fin Font -->
