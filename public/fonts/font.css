@@ -69,3 +69,8 @@
     font-family: Montserrat-Light;
     src: url("/fonts/Montserrat-Light.ttf");
 }
+
+@font-face {
+    font-family: Karla-Regular;
+    src: url("/fonts/Karla-Italic-VariableFont_wght.ttf");
+}
