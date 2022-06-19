@@ -26,6 +26,7 @@
 }
 
 .precio {
+    font-family: "Karla-Bold";
     flex-basis: 25%;
     text-align: right;
 }
@@ -79,10 +80,13 @@
 
 .item-menu {
     box-sizing: border-box;
+    border-bottom: solid #ab2f0f;
     color: #291009;
-    font-family: "Montserrat-Light";
+    font-size: 13px;
+    font-family: "Karla-Regular";
     font-size: var(--tl);
-    padding: 2px 20px;
+    line-height: 1.2;
+    padding: 6px 0px;
     width: 100%;
 }
 
