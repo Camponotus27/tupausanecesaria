@@ -31,8 +31,7 @@
     text-align: right;
 }
 
-.description {
-    color: white;
+.descripcion {
     font-size: var(--tn);
 }
 
@@ -82,7 +81,6 @@
     box-sizing: border-box;
     border-bottom: solid #ab2f0f;
     color: #291009;
-    font-size: 13px;
     font-family: "Karla-Regular";
     font-size: var(--tl);
     line-height: 1.2;

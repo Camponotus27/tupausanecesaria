@@ -48,7 +48,10 @@
 								@foreach($category->products as $product)
 								<div class="item-menu">
 									<div class="caja-item">
-										<div class="nombre">{{ $product->nombre}}</div>
+										<div>
+											<div class="nombre">{{ $product->nombre}}</div>
+											<div class="descripcion">{{ $product->descripcion}}</div>
+										</div>
 										<div class="precio">${{$product->precio}}</div>		
 									</div>
 								</div>
