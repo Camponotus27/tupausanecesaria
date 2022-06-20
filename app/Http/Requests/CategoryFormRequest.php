@@ -26,6 +26,8 @@ class CategoryFormRequest extends FormRequest
         return [
             'nombre' => 'required|max:50',
             'descripcion' => 'max:500',
+            'descripcion_secundaria' => 'max:500',
+            'orden' => 'required|numeric|max:999999',
         ];
     }
 }

@@ -29,12 +29,27 @@
 			</div>
 
 			<div class="form-group">
+				{{ Form::label('orden', 'Orden') }}
+				${{ Form::number('orden', null , [ 'placeholder' => '0' , 'class' => 'form-control']) }}
+			</div>
+
+			<div class="form-group">
 				{{ Form::label('descripcion', 'Descripción') }}
 				{{ Form::textarea('descripcion', null, ['class' => 'form-control textarea-personalizado', 'placeholder' => 'Descrpcion', 'id' => 'max-descripcion-textarea' , 'maxlength' => '500']) }}
 			</div>
 			<div class="max-descripcion">
-				<lavel>maximo de caracteres : <span id= "max-descripcion-numero">500</span> </lavel>
+				<label>maximo de caracteres : <span id= "max-descripcion-numero">500</span> </label>
 			</div>
+			
+
+			<div class="form-group">
+				{{ Form::label('descripcion_secundaria', 'Descripción') }}
+				{{ Form::textarea('descripcion_secundaria', null, ['class' => 'form-control textarea-personalizado', 'placeholder' => 'Descrpcion', 'id' => 'max-descripcion-textarea-2' , 'maxlength' => '500']) }}
+			</div>
+			<div class="max-descripcion">
+				<label>maximo de caracteres : <span id= "max-descripcion-numero-2">500</span> </label>
+			</div>
+	
 
 			<div class="form-group">
 				<button class="btn btn-primary" type="submit">Guardar</button>

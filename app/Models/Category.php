@@ -14,6 +14,8 @@ class Category extends Model
         'nombre',
         'descripcion',
         'estado',
+        'descripcion_secundaria',
+        'orden',
     ];
 
     protected $guarded = []; //campos que no agremamos al modelo
