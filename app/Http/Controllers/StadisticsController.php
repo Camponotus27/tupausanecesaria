@@ -10,6 +10,7 @@ class StadisticsController extends Controller
     public function visits(Request $request)
     {
         $visits_grouped_created = Visit::where('url', 'not like', "%.css")
+            ->where('created_at', '>=', date("d-m-Y",strtotime(date("d-m-Y")."- 1 month")))
             ->where('url', url('/'))
             ->orWhere('url', url('/') . '/menu')
             ->get()
