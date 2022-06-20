@@ -14,15 +14,5 @@ class MenuController extends Controller
         $categories = Category::all();
 
         return view('menu.index', compact(['products', 'categories']));
-
-        // TODO: para que es esto?
-        $query = trim($request->get('searchText'));
-
-        $category = Category::forMenu()->get();
-
-        return view('menu.index', [
-            "categories" => $category,
-            "searchText" => $query,
-        ]);
     }
 }
