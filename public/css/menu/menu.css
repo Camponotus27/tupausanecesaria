@@ -27,6 +27,7 @@
 }
 
 .precio {
+    padding-left: 8px;
     font-family: "Karla-Bold";
     flex-basis: 25%;
     text-align: right;
