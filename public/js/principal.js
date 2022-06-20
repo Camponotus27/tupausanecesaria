@@ -7,6 +7,15 @@ $textarea.on('keyup', function(){
 	$numero.text(500 - $(this).val().length);
 });
 
+
+var $numero2 = $('#max-descripcion-numero-2');
+var $textarea2 = $('#max-descripcion-textarea-2');
+
+
+$textarea2.on('keyup', function(){
+	$numero2.text(500 - $(this).val().length);
+});
+
 //desactivar checkbox permiso
 var $check = $('#radio-check-personalizar');
 var $opciones = $('.chekbox-permisos');

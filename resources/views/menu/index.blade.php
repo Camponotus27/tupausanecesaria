@@ -44,6 +44,7 @@
 				@foreach($categories as $category)
 					@if($category->products->count() > 0)
 						<h1 class="category">{{$category->nombre}}</h1>
+						<div class="category-descripcion">{{$category->descripcion}}</div>
 						<div class="">
 								@foreach($category->products as $product)
 								<div class="item-menu">
@@ -58,6 +59,7 @@
 								@include('menu.modal-ordenar' , ['complements' => $product->complements] )
 								@endforeach
 						</div>
+						<div class="category-descripcion-secundaria">{{$category->descripcion_secundaria}}</div>
 					@endif
 				@endforeach
 			</center>

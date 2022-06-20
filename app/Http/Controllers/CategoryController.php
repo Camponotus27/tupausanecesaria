@@ -50,6 +50,8 @@ class CategoryController extends Controller
         $category = new Category();
         $category->nombre = $request->get('nombre');
         $category->descripcion = $request->get('descripcion');
+        $category->descripcion_secundaria = $request->get('descripcion_secundaria');
+        $category->orden = $request->get('orden');
         $category->estado = '1';
         $category->save();
 

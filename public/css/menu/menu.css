@@ -26,6 +26,14 @@
     color: #ab2f0f;
 }
 
+.category-descripcion{
+    padding: 0px 8px 15px 8px;
+}
+
+.category-descripcion-secundaria{
+    padding: 4px 8px 2px 8px;
+}
+
 .precio {
     padding-left: 8px;
     font-family: "Karla-Bold";
