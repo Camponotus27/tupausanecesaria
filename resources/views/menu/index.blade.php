@@ -44,6 +44,7 @@
 				@foreach($categories as $category)
 					@if($category->products->count() > 0)
 						<h1 class="category">{{$category->nombre}}</h1>
+						<div class="category-descripcion">{{$category->descripcion}}</div>
 						<div class="">
 								@foreach($category->products as $product)
 								<div class="item-menu">
