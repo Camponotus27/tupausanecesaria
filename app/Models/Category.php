@@ -21,7 +21,7 @@ class Category extends Model
     //relaciones
     public function products()
     {
-        return $this->hasMany('App\Models\Product', 'id_category')->where('estado', '=', '1');
+        return $this->hasMany('App\Models\Product', 'id_category')->where('estado', '=', '1')->orderBy('nombre', 'asc');
     }
 
     //general
