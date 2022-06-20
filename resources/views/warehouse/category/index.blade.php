@@ -23,6 +23,7 @@
 			<thead>
 				<th>ID</th>
 				<th>NOMBRE</th>
+				<th>ORDEN</th>
 				<th>DESCRIPCION</th>
 				<th>OPCIONES</th>
 			</thead>
@@ -30,6 +31,7 @@
 			<tr>
 				<td>{{ $category->id}}</td>
 				<td>{{ $category->nombre}}</td>
+				<td>{{ $category->orden}}</td>
 				<td>{{ $category->descripcion}}</td>
 				<td>
 					@can('warehouse.category.edit')
