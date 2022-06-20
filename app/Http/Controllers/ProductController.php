@@ -68,7 +68,7 @@ class ProductController extends Controller
         $product->nombre = $request->get('nombre');
         //$product->crema = $request->get('crema');
         //$product->azucar = $request->get('azucar');
-        //$product->descripcion = $request->get('descripcion');
+        $product->descripcion = $request->get('descripcion');
         //$product->stock = $request->get('stock');
         $product->precio = $request->get('precio');
         $product->estado = '1';

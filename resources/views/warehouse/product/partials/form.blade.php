@@ -133,7 +133,7 @@
 				{{ Form::textarea('descripcion', null, ['class' => 'form-control textarea-personalizado', 'placeholder' => 'Descrpcion', 'id' => 'max-descripcion-textarea' , 'maxlength' => '500']) }}
 			</div>
 			<div class="max-descripcion">
-				<lavel>maximo de caracteres : <span id= "max-descripcion-numero">500</span> </lavel>
+				<label>maximo de caracteres : <span id= "max-descripcion-numero">500</span> </label>
 			</div>
 
 		</div>
