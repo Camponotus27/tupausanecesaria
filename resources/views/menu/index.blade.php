@@ -59,6 +59,7 @@
 								@include('menu.modal-ordenar' , ['complements' => $product->complements] )
 								@endforeach
 						</div>
+						<div class="category-descripcion-secundaria">{{$category->descripcion_secundaria}}</div>
 					@endif
 				@endforeach
 			</center>

@@ -19,6 +19,8 @@ class CategorySeeder extends Seeder
             'estado' => 1,
             'descripcion' =>
                 'Rica mermelada de frutas sabor tamarindo pero digamos que es de pera',
+            'orden' => 1,
+            'descripcion_secundaria' => 'es una desadaiua dasecunaweda dadjh aoidua oiduh adiuhaw woidyg awd'
         ]);
 
         Category::create([
@@ -26,6 +28,8 @@ class CategorySeeder extends Seeder
             'estado' => 1,
             'descripcion' =>
                 'Rica mermelada de frutas sabor tamarindo pero digamos que es de pera',
+                'orden' => 10,
+                'descripcion_secundaria' => 'es una desadaiua dasecunaweda dadjh aoidua oiduh adiuhaw woidyg awd'
         ]);
 
         Category::create([
@@ -33,6 +37,7 @@ class CategorySeeder extends Seeder
             'estado' => 1,
             'descripcion' =>
                 'Rica mermelada de frutas sabor tamarindo pero digamos que es de pera',
+                'orden' => 3
         ]);
 
         Category::create([
@@ -40,6 +45,8 @@ class CategorySeeder extends Seeder
             'estado' => 0,
             'descripcion' =>
                 'Es un test pra verificar si se ve un producto con estado 0',
+                'orden' => 7,
+                'descripcion_secundaria' => 'es una desadaiua dasecunaweda dadjh aoidua oiduh adiuhaw woidyg awd'
         ]);
     }
 }
