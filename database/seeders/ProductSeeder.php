@@ -27,7 +27,7 @@ class ProductSeeder extends Seeder
 
         Product::create([
             'nombre' => 'Producto 2',
-            'descripcion' => 'Es una descripcion',
+            'descripcion' => 'Es una descripcion daw daiuhda asudawh aydwawh daydg 97ydawoduh a8d adiauwdh8a6 day daw8d auhdb akwudt ao duya od aodhyd aoduh asodu wasdhbuyaw dawd aodiyaw doauy adjahb wdkuy',
             'stock' => 20,
             'precio' => 1990,
             'id_category' => 1,

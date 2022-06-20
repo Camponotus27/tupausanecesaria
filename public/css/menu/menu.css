@@ -34,6 +34,7 @@
 
 .descripcion {
     font-size: var(--tn);
+    text-align: left;
 }
 
 .boton-carrito {
