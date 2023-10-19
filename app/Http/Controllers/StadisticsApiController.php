@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\CustomVisit;
 use Illuminate\Support\Facades\Validator;
+use Carbon\Carbon;
 
 class StadisticsApiController extends Controller
 {
@@ -17,8 +18,11 @@ class StadisticsApiController extends Controller
             return CustomVisit::countPerDayChart()->get();
         }
 
+        $threeMonthsAgo = Carbon::now()->subMonths(3);
+
         return CustomVisit::countPerDayChart()
             ->where('url', url('/') . $request->pathSearch)
+            ->whereDate('created_at', '>=', $threeMonthsAgo)
             ->get();
     }
 }
