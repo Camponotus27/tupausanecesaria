@@ -1,0 +1,23 @@
+{
+  "name": "PHP & MySQL DevContainer",
+  "dockerComposeFile": ["docker-compose.yml"],
+  "service": "php",
+  "workspaceFolder": "/var/www/html",
+  "extensions": [
+    "ms-azuretools.vscode-docker",
+    "felixfbecker.php-debug",
+    "bmewburn.vscode-intelephense-client"
+  ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "remoteEnv": {
+    "MYSQL_ROOT_PASSWORD": "1234",
+    "MYSQL_DATABASE": "tupausanecesaria"
+  },
+  "forwardPorts": [
+    80,
+    3306
+  ],
+  "postCreateCommand": "composer install"
+}

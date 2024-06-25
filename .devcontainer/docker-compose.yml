@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  php:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ..:/var/www/html
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    networks:
+      - tupausa-network
+
+  db:
+    image: mysql:8.0
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: tupausanecesaria
+    ports:
+      - "3306:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - tupausa-network
+
+volumes:
+  db-data:
+
+networks:
+  tupausa-network:
