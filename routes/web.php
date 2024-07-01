@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('menu.main');
+    return redirect('menu');
 });
 
 Auth::routes();

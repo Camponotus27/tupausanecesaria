@@ -56,6 +56,11 @@
 }
 
 @font-face {
+    font-family: Shrikhand;
+    src: url("/fonts/Shrikhand-Regular.ttf");
+}
+
+@font-face {
     font-family: Santiago-Pro;
     src: url("/fonts/Santiago-Pro.ttf");
 }

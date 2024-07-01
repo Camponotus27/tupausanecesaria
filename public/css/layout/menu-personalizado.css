@@ -20,16 +20,6 @@
 	/*http://cubic-bezier.com/#0,1,0,1*/
 }
 
-.container-buttons-botom:before{
-	content: "";
-	background: linear-gradient(rgba(0,0,0,7), transparent);
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 75px;
-	z-index: -999;
-}
 
 .item-buttons-botom{
 	width: 100%;

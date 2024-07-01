@@ -501,10 +501,9 @@ img {
 .section {
     clear: both;
     display: block;
-    height: 1000px;
     margin: 0 auto;
     overflow: hidden;
-    padding: 0;
+    padding: 15px;
     position: relative;
     width: 100%;
     z-index: 10;

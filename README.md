@@ -22,6 +22,7 @@ Created all tables and data
 php artisan migrate --seed
 ´´´
 
+## 
 ´´´sh
 git config --global user.name "Tu Nombre"
 git config --global user.email "tuemail@example.com"

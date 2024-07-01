@@ -34,7 +34,7 @@
 
     <!--bootstrap-glyphicons-->
 
-    <link rel="stylesheet" href="{{asset('css/principal.css?v=1.0')}}">
+    <link rel="stylesheet" href="{{asset('css/principal.css?v=2.0')}}">
 
     <!-- Jcrop -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
@@ -208,7 +208,7 @@
 
       <!-- fin navbar -->
       <!-- menu personalizado -->
-        @if(Request::url() === Request::root())
+      <!--  @if(Request::url() === Request::root())
           <div class="">
                   @can('navigate.unete')
                     @include('layouts.unete')
@@ -224,7 +224,7 @@
         @endif
                 
               
-        @include('layouts.menu-herramientas')
+       @include('layouts.menu-herramientas') -->
 
     
         @include('layouts.shopping-cart')  
@@ -234,8 +234,9 @@
         </div> 
    
           <!--Fin-Contenido-->
+
+          <!--
           <footer>
-       
             <div class="footer-personalizado">
               <div class="mt-txl"></div>
               @include('layouts.avisos')
@@ -263,7 +264,7 @@
                 <a style="text-decoration: none; color: #dbcb6b;" href="{{ url('/login') }}">StopTime</a> distribuidora anonima
             </div>
           </footer>
-
+            -->
         <script src="{{ mix('js/app.js') }}"></script>
 
         <!-- jquery 2.1.4 al cambiarlo muere el jcrop -->
