@@ -1,5 +1,5 @@
 :root {
-    font-family: "Shrikhand";
+    font-family: "Shrikhand", serif;
 
     --ratio: 1.414;
 
@@ -651,7 +651,7 @@ body {
 }
 
 .titulo_login {
-    font-family: "Shrikhand";
+    font-family: "Shrikhand", serif;
     color: #eb3d00;
     font-size: var(--txxl);
     text-align: center;

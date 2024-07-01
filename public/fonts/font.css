@@ -55,10 +55,10 @@
     src: url("/fonts/Podkova-VariableFont_wght.ttf");
 }
 
-@font-face {
+/*@font-face {
     font-family: Shrikhand;
     src: url("/fonts/Shrikhand-Regular.ttf");
-}
+}*/
 
 @font-face {
     font-family: Santiago-Pro;
